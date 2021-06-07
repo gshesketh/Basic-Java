@@ -13,6 +13,7 @@ public class StoreMgmtSysTest {
             System.out.println("***************************");
 
             //employees[i] = new Employee(empNum, fName, lName, email, phone)
+            //testing
             in.close();
         }
     }
