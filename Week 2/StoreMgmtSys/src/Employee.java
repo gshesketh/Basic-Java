@@ -22,18 +22,18 @@ public class Employee {
 
     /*Lit l'information des objets Employee*/
     public void readEmployeeInfo() {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter employee number: ");
-        this.employeeNumber = in.nextInt();
+        this.employeeNumber = sc.nextInt();
         System.out.println("Enter employee first name: ");
-        this.firstName = in.nextLine();
+        this.firstName = sc.nextLine();
         System.out.println("Enter employee last name: ");
-        this.lastName = in.nextLine();
+        this.lastName = sc.nextLine();
         System.out.println("Enter employee email: ");
-        this.emailId = in.nextLine();
+        this.emailId = sc.nextLine();
         System.out.println("Enter employee phone number: ");
-        this.phoneNumber = in.nextLong();
-        in.close();
+        this.phoneNumber = sc.nextLong();
+        sc.close();
         readSalary();
     }
 
@@ -42,24 +42,24 @@ public class Employee {
         double monthly = 0.0;
         double rate = 0.0;
         double worked = 0.0;
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("1.. Regular");
         System.out.println("2.. Contract");
         System.out.println("Enter type of employee: ");
-        int salaryType = in.nextInt();
+        int salaryType = sc.nextInt();
         if (salaryType == 1) {
             System.out.println("Enter annual salary: ");
-            annual = in.nextDouble();
+            annual = sc.nextDouble();
             monthly = annual/12;
         }
         else {
             System.out.println("Enter hourly rate: ");
-            rate = in.nextDouble();
+            rate = sc.nextDouble();
             System.out.println("Enter number of hours worked: ");
-            worked = in.nextDouble();
+            worked = sc.nextDouble();
             monthly = rate * worked;
         }
-        in.close();
+        sc.close();
         this.salary = monthly;
     }
 

@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class StoreMgmtSysTest {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of employees: ");
-        int num = in.nextInt();
+        int num = sc.nextInt();
+        sc.close();
         Employee[] employees = new Employee[num];
         employees[0] = new Employee(100, "John", "Doe", "doe@test.com", 1234567890);
         for (int i = 1; i < num; i++) {
@@ -16,7 +17,6 @@ public class StoreMgmtSysTest {
             employees[i].readEmployeeInfo();
             employees[i].readSalary();
         }
-        in.close();
         for (int i = 0; i < num; i++) {
             employees[i].printEmployee();
         }
