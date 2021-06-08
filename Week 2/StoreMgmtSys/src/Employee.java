@@ -16,6 +16,10 @@ public class Employee {
         this.phoneNumber = phone;
     }
 
+    Employee() {
+
+    }
+
     /*Lit l'information des objets Employee*/
     public void readEmployeeInfo() {
         Scanner in = new Scanner(System.in);
@@ -60,6 +64,6 @@ public class Employee {
     }
 
     public void printEmployee() {
-
+        System.out.printf("%d %s %s %s %d %d", this.employeeNumber, this.firstName, this.lastName, this.emailId, this.phoneNumber, this.salary);
     }
 }

@@ -12,9 +12,13 @@ public class StoreMgmtSysTest {
             System.out.println("Enter details of employee " + emp);
             System.out.println("***************************");
 
-            //employees[i] = new Employee(empNum, fName, lName, email, phone)
-
-            in.close();
+            employees[i] = new Employee();
+            employees[i].readEmployeeInfo();
+            employees[i].readSalary();
+        }
+        in.close();
+        for (int i = 0; i < num; i++) {
+            employees[i].printEmployee();
         }
     }
 }
