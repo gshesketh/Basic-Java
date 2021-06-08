@@ -9,10 +9,10 @@ public class Employee {
     private double salary;
 
     /*Constructor pour objet employee sans le salaire.*/
-    Employee(int empNum, String fName, String lName, String email, long phone) {
+    Employee(int empNum, String first, String last, String email, long phone) {
         this.employeeNumber = empNum;
-        this.firstName = fName;
-        this.lastName = lName;
+        this.firstName = first;
+        this.lastName = last;
         this.emailId = email;
         this.phoneNumber = phone;
     }
@@ -23,9 +23,9 @@ public class Employee {
         System.out.println("Enter employee number: ");
         int empNum = console.nextInt();
         System.out.println("Enter employee first name: ");
-        String fName = console.nextLine();
+        String first = console.nextLine();
         System.out.println("Enter employee last name: ");
-        String lName = console.nextLine();
+        String last = console.nextLine();
         System.out.println("Enter employee email: ");
         String email = console.nextLine();
         System.out.println("Enter employee phone number: ");
