@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Employee {
     private int employeeNumber;
     private String firstName;
@@ -19,23 +18,45 @@ public class Employee {
 
     /*Lit l'information des objets Employee*/
     public void readEmployeeInfo() {
-        Scanner console = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println("Enter employee number: ");
-        int empNum = console.nextInt();
+        this.employeeNumber = in.nextInt();
         System.out.println("Enter employee first name: ");
-        String first = console.nextLine();
+        this.firstName = in.nextLine();
         System.out.println("Enter employee last name: ");
-        String last = console.nextLine();
+        this.lastName = in.nextLine();
         System.out.println("Enter employee email: ");
-        String email = console.nextLine();
+        this.emailId = in.nextLine();
         System.out.println("Enter employee phone number: ");
-        Long phone = console.nextLong();
-        console.close();
+        this.phoneNumber = in.nextLong();
+        in.close();
         readSalary();
     }
 
     public void readSalary() {
-
+        double annual = 0.0;
+        double monthly = 0.0;
+        double rate = 0.0;
+        double worked = 0.0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("1.. Regular");
+        System.out.println("2.. Contract");
+        System.out.println("Enter type of employee: ");
+        int salaryType = in.nextInt();
+        if (salaryType == 1) {
+            System.out.println("Enter annual salary: ");
+            annual = in.nextDouble();
+            monthly = annual/12;
+        }
+        else {
+            System.out.println("Enter hourly rate: ");
+            rate = in.nextDouble();
+            System.out.println("Enter number of hours worked: ");
+            worked = in.nextDouble();
+            monthly = rate * worked;
+        }
+        in.close();
+        this.salary = monthly;
     }
 
     public void printEmployee() {
