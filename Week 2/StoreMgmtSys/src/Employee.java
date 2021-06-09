@@ -1,5 +1,7 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class Employee {
+
     private int employeeNumber;
     private String firstName;
     private String lastName;
@@ -16,24 +18,30 @@ public class Employee {
         this.phoneNumber = phone;
     }
 
+    /* Constructeur par défaut sans args */
     Employee() {
 
     }
 
     /*Lit l'information des objets Employee*/
     public void readEmployeeInfo() {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);    /* Ne peut pas utiliser sc.close() avec system.in puisque ça le ferme indéfiniment. */
         System.out.println("Enter employee number: ");
-        this.employeeNumber = sc.nextInt();
+        int empNum = sc.nextInt();
+        sc.nextLine();
         System.out.println("Enter employee first name: ");
-        this.firstName = sc.nextLine();
+        String first = sc.nextLine();
         System.out.println("Enter employee last name: ");
-        this.lastName = sc.nextLine();
+        String last = sc.nextLine();
         System.out.println("Enter employee email: ");
-        this.emailId = sc.nextLine();
+        String email = sc.nextLine();
         System.out.println("Enter employee phone number: ");
-        this.phoneNumber = sc.nextLong();
-        sc.close();
+        long phone = sc.nextLong();
+        this.employeeNumber = empNum;
+        this.firstName = first;
+        this.lastName = last;
+        this.emailId = email;
+        this.phoneNumber = phone;
         readSalary();
     }
 
@@ -59,11 +67,11 @@ public class Employee {
             worked = sc.nextDouble();
             monthly = rate * worked;
         }
-        sc.close();
         this.salary = monthly;
     }
 
     public void printEmployee() {
-        System.out.printf("%d %s %s %s %d %d", this.employeeNumber, this.firstName, this.lastName, this.emailId, this.phoneNumber, this.salary);
+        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d | %12.2f | %n", this.employeeNumber, this.firstName + " " + this.lastName, 
+        this.emailId, this.phoneNumber, this.salary);
     }
 }
