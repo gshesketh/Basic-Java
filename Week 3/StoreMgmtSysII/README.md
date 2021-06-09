@@ -1,4 +1,4 @@
-## Store Management System II
+# Store Management System II
 
 Continuation of the previous store management system. Superclasses, subclasses, as well as polymorphism are explored in this exercise.
 
