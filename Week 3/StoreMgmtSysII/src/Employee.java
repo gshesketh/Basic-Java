@@ -31,7 +31,7 @@ public class Employee extends Person {
 
     /* Imprime l'information de manière formattée à l'aide de printf */
     public void printEmployee() {
-        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d | %n", this.employeeNumber, super.getName(), 
+        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d |", this.employeeNumber, super.getName(), 
         this.email, this.phoneNumber);
     }
 }

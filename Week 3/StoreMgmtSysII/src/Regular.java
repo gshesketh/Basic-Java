@@ -29,7 +29,6 @@ public class Regular extends Employee {
     @Override
     public void printEmployee() {
         super.printEmployee();
-        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d | %12.2f | %n", super.employeeNumber, super.getName(), 
-        super.email, super.phoneNumber, this.salary);
+        System.out.printf(Locale.CANADA, "%13.2f | %n", this.salary);
     }
 }
