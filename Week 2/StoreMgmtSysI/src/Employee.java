@@ -27,21 +27,16 @@ public class Employee {
     public void readEmployeeInfo() {
         Scanner sc = new Scanner(System.in);    /* Ne peut pas utiliser sc.close() avec system.in puisque ça le ferme indéfiniment. */
         System.out.println("Enter employee number: ");
-        int empNum = sc.nextInt();
+        this.employeeNumber = sc.nextInt();
         sc.nextLine();
         System.out.println("Enter employee first name: ");
-        String first = sc.nextLine();
+        this.firstName = sc.nextLine();
         System.out.println("Enter employee last name: ");
-        String last = sc.nextLine();
+        this.lastName = sc.nextLine();
         System.out.println("Enter employee email: ");
-        String email = sc.nextLine();
+        this.emailId = sc.nextLine();
         System.out.println("Enter employee phone number: ");
-        long phone = sc.nextLong();
-        this.employeeNumber = empNum;
-        this.firstName = first;
-        this.lastName = last;
-        this.emailId = email;
-        this.phoneNumber = phone;
+        this.phoneNumber = sc.nextLong();
         readSalary();
     }
 
