@@ -5,14 +5,18 @@ public class Person {
     protected String email;
     protected long phoneNumber;
 
-    /* Constructeur
-    Peut-être avoir besoin d'arguments plus tard. */
+    /* Constructeur */
     Person(String first, String last, String email, long phone) {
         this.firstName = first;
         this.lastName = last;
         this.email = email;
         this.phoneNumber = phone;
     }
+
+    Person() {
+
+    }
+    
     /* Méthode qui donne le nom complet  */
     public String getName() {
         return this.firstName + " " + this.lastName;

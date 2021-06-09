@@ -1,3 +1,6 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Contractor extends Employee {
     private double hourlyRate;
     private double numHours;
@@ -9,11 +12,20 @@ public class Contractor extends Employee {
         this.numHours = hours;
     }
 
+    Contractor() {
+
+    }
+
     /* call readEmployee from Employee parent then
      read rate and hours worked */
     @Override
     public void readEmployee() {
         super.readEmployee();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter hourly rate: ");
+        this.hourlyRate = sc.nextDouble();
+        System.out.println("Enter number of hours worked: ");
+        this.numHours = sc.nextDouble();
     }
 
     /* call printEmployee from Employee parent then 
@@ -21,5 +33,7 @@ public class Contractor extends Employee {
     @Override
     public void printEmployee() {
         super.printEmployee();
+        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d | %12.2f | %n", super.employeeNumber, super.getName(), 
+        super.email, super.phoneNumber, this.hourlyRate * this.numHours);
     }
 }

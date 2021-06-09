@@ -1,3 +1,6 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Regular extends Employee {
     private double salary;
 
@@ -7,12 +10,18 @@ public class Regular extends Employee {
         this.salary = sal;
     }
 
+    Regular() {
+
+    }
+
     /* Calls readEmployee from super class Employee then reads salary type
     and converts to monthly before storing it in salary instance var. */
     @Override
     public void readEmployee() {
         super.readEmployee();
-        this.salary = 0.0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter annual salary: ");
+        this.salary = sc.nextDouble()/12;
     }
 
     /* Calls printEmployee from super Employee then prints the salary info
@@ -20,6 +29,7 @@ public class Regular extends Employee {
     @Override
     public void printEmployee() {
         super.printEmployee();
-
+        System.out.printf(Locale.CANADA,"%12d | %20s | %20s | %12d | %12.2f | %n", super.employeeNumber, super.getName(), 
+        super.email, super.phoneNumber, this.salary);
     }
 }
