@@ -1,4 +1,7 @@
 package payrollabstractclass;
+
+import java.util.Locale;
+
 public class Regular extends Employee {
 
     /* Default constructor */
@@ -20,7 +23,7 @@ public class Regular extends Employee {
 
     /* Print the payment method line in the console */
     public void printPaymentMethod() {
-        System.out.printf("Direct depositing $%f.2 to %s's bank account", calcPayroll(), super.getName());
+        System.out.printf(Locale.CANADA, "Direct depositing $%,.2f to %s's bank account. %n", calcPayroll(), super.getName());
     }
 
 }

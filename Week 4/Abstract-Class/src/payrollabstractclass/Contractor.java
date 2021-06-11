@@ -1,4 +1,7 @@
 package payrollabstractclass;
+
+import java.util.Locale;
+
 public class Contractor extends Employee {
 
     /* Default constructor */
@@ -15,11 +18,11 @@ public class Contractor extends Employee {
 
     /* Calculate payment amount using provided values and formula */
     public double calcPayroll() {
-        return super.numHours * super.hourlyRate * (1 - super.taxRate);
+        return super.numHours * super.hourlyRate * (1 + super.taxRate);
     }
 
     /* Print the payment method line in the console */
     public void printPaymentMethod() {
-        System.out.printf("Mailed a cheque to %s for $%f.2", super.getName(), calcPayroll());
+        System.out.printf(Locale.CANADA, "Mailed a cheque to %s for $%,.2f. %n", super.getName(), calcPayroll());
     }
 }
