@@ -1,15 +1,16 @@
 package payrollabstractclass;
-
 public abstract class Employee extends Person {
     protected double numHours;
     protected double hourlyRate;
     protected double taxRate;
     protected double deductionRate;
 
+    /* Default constructor */
     Employee() {
 
     }
 
+    /* Constructor based off of Person object */
     Employee(String first, String last, String email, double num) {
         super(first, last, email);
         this.numHours = num;

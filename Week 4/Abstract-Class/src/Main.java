@@ -7,5 +7,9 @@ public class Main {
         System.out.println("Enter number of employees: ");
         int num = sc.nextInt();
         Payroll payroll = new Payroll(num);
+        payroll.readEmployees();
+        System.out.println("\n\nSummary of Payroll Processing");
+        System.out.println("=============================");
+        payroll.processPayroll();
     }
 }
