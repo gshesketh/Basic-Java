@@ -11,5 +11,6 @@ public class Main {
         System.out.println("\n\nSummary of Payroll Processing");
         System.out.println("=============================");
         payroll.processPayroll();
+        sc.close();
     }
 }
