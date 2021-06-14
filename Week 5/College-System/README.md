@@ -1,3 +1,3 @@
-## College System
+# College System
 
-# Inheritance and Abstract Classes
+## Inheritance and Abstract Classes
