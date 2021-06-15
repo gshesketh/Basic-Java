@@ -21,12 +21,20 @@ public class Student extends Person {
 
     /* reads name, std num, phon, email, program */
     public void readInfo() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter program name: ");
+        this.programName = sc.nextLine();
         System.out.println("Enter student number: ");
+        this.studentNumber = sc.nextInt();
+        sc.nextLine();
         System.out.println("Enter first name: ");
+        super.firstName = sc.nextLine();
         System.out.println("Enter last name: ");
+        super.lastName = sc.nextLine();
         System.out.println("Enter email ID: ");
-        System.out.println("Enter phone number: ");  
+        super.emailId = sc.nextLine();
+        System.out.println("Enter phone number: ");
+        super.phoneNumber = sc.nextLong();
     }
 
     /* reads number of courses
@@ -59,7 +67,7 @@ public class Student extends Person {
     /* Specifc method to print name, std num, phone, email, program 
     formatted with printf */
     public void printInfo() {
-
+        System.out.printf("%s | %d | %s | %s | %d |", this.programName, this.studentNumber, super.firstName + " " + super.lastName, super.emailId, super.phoneNumber);
     }
 
 }
