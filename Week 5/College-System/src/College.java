@@ -40,6 +40,8 @@ public class College {
             }
             else { /* any other integer selection */
                 System.out.println("Wrong student type selected.");
+                i--; /* counters the loop iteration */
+                continue; /* restarts the loop at the current iteration */
             }
             students[i].readInfo();
             students[i].readMarks();
