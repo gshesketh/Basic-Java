@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Student extends Person {
@@ -67,7 +68,7 @@ public class Student extends Person {
     /* Specifc method to print name, std num, phone, email, program 
     formatted with printf */
     public void printInfo() {
-        System.out.printf("%s | %d | %s | %s | %d |", this.programName, this.studentNumber, super.firstName + " " + super.lastName, super.emailId, super.phoneNumber);
+        System.out.printf(Locale.CANADA, "%10s|%8d|%15s|%15s|%15d|%5.2f|", this.programName, this.studentNumber, super.firstName + " " + super.lastName, super.emailId, super.phoneNumber, this.gpa);
     }
 
 }
