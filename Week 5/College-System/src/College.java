@@ -12,13 +12,13 @@ public class College {
 
     /* Print title of the college */
     public void printTitle() {
-        String verticalLine = "*";
+        String horizontalLine = "*";
         String title = this.name + " - List of Students";
         int k = title.length();
         for (int i = 1; i < k; i++) {
-            verticalLine += "*";
+            horizontalLine+= "*";
         }
-        System.out.printf("%n%s%n%s%n", title, verticalLine);
+        System.out.printf("%n%s%n%s%n", title, horizontalLine);
     }
 
     /* Loop through students and read appropriate data by assigning the correct object and calling the associated readInfo() method */
