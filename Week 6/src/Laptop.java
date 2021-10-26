@@ -8,7 +8,7 @@ public class Laptop implements Computer {
         this.os = opsoft;
         this.color = colour;
         this.price = prix;
-        this.OfferRate = 0.20;
+        this.OfferRate = 0.15;
     }
 
     public Double findFinalPrice() {
