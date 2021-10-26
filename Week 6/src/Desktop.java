@@ -11,11 +11,11 @@ public class Desktop implements Computer {
         this.taxRate = 0.13;
     }
 
-    Double findFinalPrice() {
+    public Double findFinalPrice() {
         return this.price*(1+this.taxRate);
     }
 
-    void printDetails() {
-        System.out.println(username + " has one " + companyName + " " + this.getClass().getSimpleName() + " with " + os + "OS, uses" + headphoneName + ". Price:" findFinalPrice());
+    public void printDetails() {
+        System.out.println(username + " has one " + companyName + " " + this.getClass().getSimpleName() + " with " + os + "OS, uses" + headphoneName + ". Price:" + findFinalPrice());
     }
 }

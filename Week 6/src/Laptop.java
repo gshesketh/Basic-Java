@@ -11,11 +11,11 @@ public class Laptop implements Computer {
         this.OfferRate = 0.20;
     }
 
-    Double findFinalPrice() {
+    public Double findFinalPrice() {
         return this.price*(1-this.OfferRate);
     }
 
-    void printDetails() {
+    public void printDetails() {
         System.out.println(username + " has one " + color + " " + companyName + " " + this.getClass().getSimpleName() + " with " + os + "OS. Price:" + findFinalPrice());
     }
 
