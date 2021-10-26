@@ -16,7 +16,7 @@ public class Laptop implements Computer {
     }
 
     public void printDetails() {
-        System.out.println(username + " has one " + color + " " + companyName + " " + this.getClass().getSimpleName() + " with " + os + "OS. Price:" + findFinalPrice());
+        System.out.println(username + " has one " + color + " " + companyName + " " + this.getClass().getSimpleName() + " with " + os + " OS. Price: " + findFinalPrice());
     }
 
 }

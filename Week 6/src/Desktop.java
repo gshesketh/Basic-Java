@@ -16,6 +16,6 @@ public class Desktop implements Computer {
     }
 
     public void printDetails() {
-        System.out.println(username + " has one " + companyName + " " + this.getClass().getSimpleName() + " with " + os + "OS, uses" + headphoneName + ". Price:" + findFinalPrice());
+        System.out.println(username + " has one " + companyName + " " + this.getClass().getSimpleName() + " with " + os + " OS, uses " + headphoneName + ". Price: " + findFinalPrice());
     }
 }
